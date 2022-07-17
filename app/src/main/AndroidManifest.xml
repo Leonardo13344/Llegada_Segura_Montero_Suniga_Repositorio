@@ -14,7 +14,7 @@
         android:theme="@style/Theme.LLegadaSegura"
         tools:targetApi="31">
         <activity
-            android:name=".registro.Registro2"
+            android:name=".registro.Registro5"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
