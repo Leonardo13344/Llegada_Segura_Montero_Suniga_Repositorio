@@ -39,6 +39,7 @@
         android:layout_height="53dp"
         android:ems="10"
         android:inputType="phone"
+        android:hint="Ingresar número"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
