@@ -46,7 +46,7 @@
 
     <Button
         android:id="@+id/btnContinuar"
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:background="@drawable/boton_redondo"
         android:text="Continuar"

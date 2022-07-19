@@ -3,6 +3,9 @@ package com.example.llegadasegura.registro
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import com.example.llegadasegura.TerminosResultActivity
 import com.example.llegadasegura.databinding.ActivityRegistro2Binding
 
 
@@ -13,8 +16,24 @@ class Registro2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistro2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.checkBox.setOnClickListener {
+            validar()
+        }
         binding.btnContinuar.setOnClickListener{
             cambiarPantallaRegistro3()
+        }
+
+        val respuesta = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            if(it.resultCode == RESULT_OK){
+                val message = it.data?.getStringExtra("val")
+                Toast.makeText(this,"Funcionó",Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.btnTerminos.setOnClickListener{
+            respuesta.launch(Intent(this,TerminosResultActivity::class.java))
+
         }
 
     }
@@ -23,5 +42,13 @@ class Registro2 : AppCompatActivity() {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent)
+    }
+
+    private fun validar(){
+        if(binding.checkBox.isChecked && binding.editTextPhone.getText().toString().isNotEmpty()){
+            binding.btnContinuar.setEnabled(true)
+        }else{
+            binding.btnContinuar.setEnabled(false)
+        }
     }
 }
