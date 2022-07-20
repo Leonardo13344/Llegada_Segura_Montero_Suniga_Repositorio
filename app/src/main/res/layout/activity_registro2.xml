@@ -70,10 +70,11 @@
         style="@style/texto"
         android:layout_width="182dp"
         android:layout_height="48dp"
+        android:enabled="false"
         android:padding="3sp"
         android:text="He leido y acepto los"
-        android:textSize="15sp"
 
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/btnContinuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"

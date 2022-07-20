@@ -10,24 +10,27 @@ import com.example.llegadasegura.databinding.ActivityRegistro2Binding
 
 
 class Registro2 : AppCompatActivity() {
-    private lateinit var binding: ActivityRegistro2Binding
+      lateinit var binding: ActivityRegistro2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistro2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.checkBox.setOnClickListener {
-            validar()
-        }
         binding.btnContinuar.setOnClickListener{
             cambiarPantallaRegistro3()
         }
 
         val respuesta = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-            if(it.resultCode == RESULT_OK){
-                val message = it.data?.getStringExtra("val")
-                Toast.makeText(this,"Funcionó",Toast.LENGTH_SHORT).show()
+            if(it.resultCode == RESULT_OK && binding.editTextPhone.getText().toString().isNotEmpty()){
+                //val message = it.data?.getStringExtra("val")
+                binding.checkBox.setChecked(true)
+                binding.btnContinuar.setEnabled(true)
+                Toast.makeText(this,"Términos aceptados",Toast.LENGTH_SHORT).show()
+            }else{
+                binding.checkBox.setChecked(false)
+                binding.btnContinuar.setEnabled(false)
+                Toast.makeText(this,"Términos no aceptados",Toast.LENGTH_SHORT).show()
             }
         }
 
