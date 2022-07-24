@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "784076005756",
+    "project_id": "llegada-segura---usuarios",
+    "storage_bucket": "llegada-segura---usuarios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784076005756:android:92dc50ef46a22f34bb84f9",
+        "android_client_info": {
+          "package_name": "app.src.mainActivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784076005756-astk9tsgeg9jdmc6e82dg9nhobrrep73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApfMd_qCtLlwuIfokthXyd8aTtcJ7Gf_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784076005756-astk9tsgeg9jdmc6e82dg9nhobrrep73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784076005756:android:08b7789fba92c3b0bb84f9",
+        "android_client_info": {
+          "package_name": "com.example.llegadasegura"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784076005756-astk9tsgeg9jdmc6e82dg9nhobrrep73.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApfMd_qCtLlwuIfokthXyd8aTtcJ7Gf_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784076005756-astk9tsgeg9jdmc6e82dg9nhobrrep73.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
