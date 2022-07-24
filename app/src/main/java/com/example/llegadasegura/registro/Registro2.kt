@@ -41,17 +41,11 @@ class Registro2 : AppCompatActivity() {
 
     }
     private fun cambiarPantallaRegistro3(){
-        var intent = Intent(this, Registro3::class.java)
+        val intent = Intent(this, Registro3::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent)
     }
 
-    private fun validar(){
-        if(binding.checkBox.isChecked && binding.editTextPhone.getText().toString().isNotEmpty()){
-            binding.btnContinuar.setEnabled(true)
-        }else{
-            binding.btnContinuar.setEnabled(false)
-        }
-    }
+
 }
